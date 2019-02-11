@@ -16,3 +16,35 @@ function reformat(word) {
 
     console.log(word);
 }
+
+function next_binary_number(num) {
+
+    for (i = num.length - 1; i >= 0; i--) {
+        
+        if (num[i] == 1 && i == num.length - 1) {
+            var flag = true;
+            for (j = num.length - 1; j >= 0; j--) {
+                if (num[j] == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag) {
+                num.push(0);
+                break;
+            }
+
+        }
+
+        if (num[i] == 0) {
+            num[i] = 1;
+            break;
+        } else if (num[i] == 1) {
+            num[i] = 0;
+        }
+
+    }
+
+    console.log(num);
+}
