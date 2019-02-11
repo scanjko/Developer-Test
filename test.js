@@ -8,3 +8,11 @@ function repeat(item) {
     console.log(newArray);
 }
 
+function reformat(word) {
+
+    word = word.toLowerCase();
+    word = word.replace(/[aeiou]/g, '');
+    word = word.charAt(0).toUpperCase() + word.slice(1);
+
+    console.log(word);
+}
